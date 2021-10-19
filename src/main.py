@@ -1,30 +1,36 @@
 import numpy as np
 import pandas as pd
 import glob
-import os
+import matplotlib.pyplot as plt
 
 
 def train_model() -> None:
     pass
 
+def graficas() -> None:
+    pass
+
+def plot_3d_scatter(x, y, z, title="3d puntos"):
+    # Creating color map
+    my_cmap = plt.get_cmap('hsv')
+    
+    fig = plt.figure(figsize = (10, 7))
+    ax = plt.axes(projection ="3d")
+ 
+    sctt = ax.scatter3D(x, y, z,
+                        alpha = 0.8,
+                        c = (x+y+z),
+                        cmap = my_cmap,
+                        marker ='^')
+                        
+    plt.title(title)
+    ax.set_xlabel('Eje x')
+    ax.set_ylabel('Eje y')
+    ax.set_zlabel('Eje z')
+    fig.colorbar(sctt, ax = ax, shrink = 0.5, aspect = 5)
+    plt.show()
+
 def prepare_data() -> None:
-    if os.path.exists("data/idle/idle.csv"):
-        os.remove("data/idle/idle.csv")
-
-    if os.path.exists("data/running/running.csv"):
-        os.remove("data/running/running.csv")
-
-    if os.path.exists("data/stairs/stairs.csv"):
-        os.remove("data/stairs/stairs.csv")
-
-    if os.path.exists("data/idle/idle.csv"):
-        os.remove("data/idle/idle.csv")
-
-    if os.path.exists("data/walking/walking.csv"):
-        os.remove("data/walking/walking.csv")
-
-    if os.path.exists("data/dataset.csv"):
-        os.remove("data/dataset.csv")
 
     all_files_idle = glob.glob("data/idle/*.csv")
     all_files_running = glob.glob("data/running/*.csv")
@@ -36,16 +42,18 @@ def prepare_data() -> None:
     df_from_each_file_stairs = (pd.read_csv(f) for f in all_files_stairs)
     df_from_each_file_walking = (pd.read_csv(f) for f in all_files_walking)
 
-    pd.concat(df_from_each_file_idle, axis=0, ignore_index=True).to_csv("data/idle/idle.csv", index=False)
-    pd.concat(df_from_each_file_running, axis=0, ignore_index=True).to_csv("data/running/running.csv", index=False)
-    pd.concat(df_from_each_file_stairs, axis=0, ignore_index=True).to_csv("data/stairs/stairs.csv", index=False)
-    pd.concat(df_from_each_file_walking, axis=0, ignore_index=True).to_csv("data/walking/walking.csv", index=False)
+    df_idle = pd.concat(df_from_each_file_idle, axis=0, ignore_index=True)
+    df_running = pd.concat(df_from_each_file_running, axis=0, ignore_index=True)
+    df_stairs = pd.concat(df_from_each_file_stairs, axis=0, ignore_index=True)
+    df_walking = pd.concat(df_from_each_file_walking, axis=0, ignore_index=True)
 
-    df1 = pd.read_csv("data/idle/idle.csv")
-    df2 = pd.read_csv("data/running/running.csv")
-    df3 = pd.read_csv("data/stairs/stairs.csv")
-    df4 = pd.read_csv("data/walking/walking.csv")  
-    pd.concat([df1, df2, df3, df4], axis=0, ignore_index=True).to_csv("data/dataset.csv", index=False)
+    df = pd.concat([df_idle, df_running, df_stairs, df_walking], axis=0, ignore_index=True)
+
+    plot_3d_scatter(df_idle['accelerometer_X'], df_idle['accelerometer_Y'], df_idle['accelerometer_Z'], "3D IDLE")
+    plot_3d_scatter(df_running['accelerometer_X'], df_running['accelerometer_Y'], df_running['accelerometer_Z'], "3D RUNNING")
+    plot_3d_scatter(df_walking['accelerometer_X'], df_walking['accelerometer_Y'], df_walking['accelerometer_Z'], "3D WALKING")
+    plot_3d_scatter(df_stairs['accelerometer_X'], df_stairs['accelerometer_Y'], df_stairs['accelerometer_Z'], "3D STAIRS")
+
 
 def main() -> None:
     prepare_data()
