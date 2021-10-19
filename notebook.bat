@@ -1,1 +1,1 @@
-jupyter notebook
+jupyter notebook result.ipynb
