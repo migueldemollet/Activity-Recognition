@@ -1,4 +1,5 @@
 # Activity Recognition
+Simple project in which it tries to indicate what the user's status is from accelerometers.
 
 ## Objective
 Create a model that can predict from sensors what activity is being carried out (running, walking ...)
