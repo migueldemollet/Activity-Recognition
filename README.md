@@ -1,10 +1,51 @@
-# Reconocimiento de Actividad
+# Activity Recognition
 
-## Objetivo
-Crear un modelo que pueda predecir a partir de unos sensores que actividad se esta realizando (corriendo, caminando...)
+## Objective
+Create a model that can predict from sensors what activity is being carried out (running, walking ...)
 
 ## DataSet
-El dataset se ha obtenido desde el siguiente link [dataset](https://www.kaggle.com/kosovanolexandr/data-for-activity-recognition)
+The dataset has been obtained from the following link [dataset](https://www.kaggle.com/kosovanolexandr/data-for-activity-recognition)
 
-## Autor
+## Repository structure
+The repository is composed as follows:
+
+-> data: contains training and test data
+
+----> idle: idle state data
+
+----> walking: walking state data
+
+----> running: running state data
+
+----> stairs: stairs state data
+
+----> metadata: contains the data of the device on which the data was obtained
+
+-> src: It contains code of tests of the first versions
+
+-> LICENSE: file that indicates the license of the repository
+
+-> notebook.bat: script to run the notebook result with the jupyter notebook application
+
+-> README md: repository documentation
+
+-> result.ipynb: notebook where the project has been developed
+
+## User guide
+1. Run the following command:
+
+    $ git clone https://github.com/migueldemollet/Activity-Recognition.git
+
+2. Open the file result.ipynb with your favorite editor or by executing the script notebook.bat
+
+3. Feel free to modify the code
+
+## Built With
+* [Visual Studio Code](https://code.visualstudio.com/) - The editor used.
+* [Python](https://www.python.org/) - Programming language used.
+
+## Author
 * **Miguel del Arco** - [migueldemollet](https://github.com/migueldemollet)
+
+## License
+This project is under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
