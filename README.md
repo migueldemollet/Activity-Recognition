@@ -10,32 +10,32 @@ The dataset has been obtained from the following link [dataset](https://www.kagg
 ## Repository structure
 The repository is composed as follows:
 
--> data: contains training and test data
+* data: contains training and test data
 
-----> idle: idle state data
+    * idle: idle state data
 
-----> walking: walking state data
+    * walking: walking state data
 
-----> running: running state data
+    * running: running state data
 
-----> stairs: stairs state data
+    * stairs: stairs state data
 
-----> metadata: contains the data of the device on which the data was obtained
+    * metadata: contains the data of the device on which the data was obtained
 
--> src: It contains code of tests of the first versions
+* src: It contains code of tests of the first versions
 
--> LICENSE: file that indicates the license of the repository
+* LICENSE: file that indicates the license of the repository
 
--> notebook.bat: script to run the notebook result with the jupyter notebook application
+* notebook.bat: script to run the notebook result with the jupyter notebook application
 
--> README md: repository documentation
+* README md: repository documentation
 
--> result.ipynb: notebook where the project has been developed
+* result.ipynb: notebook where the project has been developed
 
 ## User guide
 1. Run the following command:
 
-    $ git clone https://github.com/migueldemollet/Activity-Recognition.git
+        $ git clone https://github.com/migueldemollet/Activity-Recognition.git
 
 2. Open the file result.ipynb with your favorite editor or by executing the script notebook.bat
 
