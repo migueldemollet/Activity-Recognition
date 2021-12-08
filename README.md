@@ -7,7 +7,7 @@ Create a model that can predict from sensors what activity is being carried out 
 ## DataSet
 The dataset has been obtained from the following link [dataset](https://www.kaggle.com/kosovanolexandr/data-for-activity-recognition)
 
-## Repository structure
+## Repository Structure
 The repository is composed as follows:
 
 * data: contains training and test data
