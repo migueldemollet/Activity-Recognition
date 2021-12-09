@@ -39,6 +39,8 @@ The repository is composed as follows:
 
     * metadata: contains the data of the device on which the data was obtained
 
+* img: contains the images of the readme
+
 * src: It contains code of tests of the first versions
 
 * LICENSE: file that indicates the license of the repository
