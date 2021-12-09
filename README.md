@@ -4,6 +4,23 @@ Simple project in which it tries to indicate what the user's status is from acce
 ## Objective
 Create a model that can predict from sensors what activity is being carried out (running, walking ...)
 
+## Results
+After having compared the following models:
+* SVM witk kernel rbf
+* SVM with kernel linear
+* SVM with kernel poly
+* SVN with kernel sigmoid
+* Decision Tree
+* Random Forest
+
+We can assure you that the best is the Random Forest, with the following metrics obtained:
+
+![metric image](https://github.com/migueldemollet/Activity-Recognition/blob/main/img/metricas.png)
+
+With the following confusion matrix:
+
+![metric image](https://github.com/migueldemollet/Activity-Recognition/blob/main/img/output.png)
+
 ## DataSet
 The dataset has been obtained from the following link [dataset](https://www.kaggle.com/kosovanolexandr/data-for-activity-recognition)
 
