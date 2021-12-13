@@ -12,7 +12,7 @@ After having compared the following models:
 * SVM witk kernel rbf
 * SVM with kernel linear
 * SVM with kernel poly
-* SVN with kernel sigmoid
+* SVM with kernel sigmoid
 * Decision Tree
 * Random Forest
 
