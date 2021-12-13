@@ -93,7 +93,7 @@ After having carried out an intense search for parameters and cross-validation a
 Although this model has been the best for our problem, the other models are not far behind since the metrics obtained in the cross-validation are very promising but we are interested in the random forest because it is the best.
 
 ## Ideas for future work
-* In less than classifying which sport is being carried out, one could predict which one will be carried out.
+* Predict what sport will be performed.
 * Create an application for a smartphone or smartwatch that integrates this model.
 
 ## License
