@@ -45,9 +45,9 @@ The repository is composed as follows:
 
 * LICENSE: file that indicates the license of the repository
 
-* requirements.txt: file that indicates the libraries that the project uses
-
 * notebook.bat: script to run the notebook result with the jupyter notebook application
+
+* requirements.txt: file that indicates the libraries that the project uses
 
 * README md: repository documentation
 
