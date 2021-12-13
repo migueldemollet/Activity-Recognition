@@ -1,5 +1,5 @@
 # Activity Recognition
-Project in which classifies the user's activity through from accelerometers.
+Project which classifies the user's activity through accelerometers.
 
 ## Objective
 Create a model that can predict from sensors what activity is being carried out (running, walking ...)
